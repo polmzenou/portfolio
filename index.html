@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jersey+15&display=swap" rel="stylesheet">
+</head>
+
+<body class="bg-black text-white font-sans">
+    <!-- Header -->
+    <header class="sticky top-0 bg-black bg-opacity-90 z-50 b-bottom-2">
+        <nav class="container mx-auto p-5 flex justify-between items-center">
+            <h1 class="text-2xl sm:text-3xl font-bold text-green-500"><span class="text-white">Paul</span> Mehr</h1>
+            <!-- Hamburger Menu -->
+            <div class="sm:hidden">
+                <button id="menu-btn" class="text-green-500 focus:outline-none">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                        class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16m-7 6h7" />
+                    </svg>
+                </button>
+            </div>
+            <!-- Menu Items -->
+            <ul id="menu-items"
+                class="hidden sm:flex space-x-6 bg-black sm:bg-transparent sm:static absolute top-16 left-0 w-full sm:w-auto sm:flex-row flex-col p-5 sm:p-0">
+                <li><a href="#about" class="hover:text-green-500">À propos</a></li>
+                <li><a href="#skills" class="hover:text-green-500">Compétences</a></li>
+                <li><a href="#projects" class="hover:text-green-500">Projets</a></li>
+                <li><a href="#contact" class="hover:text-green-500">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="h-screen flex items-center justify-center px-8">
+        <!-- Texte centré -->
+        <div class="flex flex-col items-center text-center">
+            <h2 class="text-4xl sm:text-5xl font-bold jersey-15-regular">
+                Bien<span class="text-green-500">venue !</span>
+            </h2>
+            <p class="text-base sm:text-lg mt-4">
+                Développeur Web | Passionné de code | Créateur d'idées, d'applications et d'innovation
+            </p>
+            <a href="#about"
+                class="mt-6 inline-block px-8 py-4 bg-green-500 text-black font-bold rounded hover:bg-green-400">
+                Découvrir
+            </a>
+        </div>
+    </section>
+
+
+
+    <!-- About Section -->
+    <section id="about" class="container mx-auto py-12 px-6 text-center">
+        <h2 class="text-3xl sm:text-4xl font-bold text-green-500 mb-6 jersey-15-regular">À propos</h2>
+        <p class="text-base sm:text-lg max-w-3xl mx-auto">Je suis un développeur web passionné
+            dans la création de sites modernes, performants et esthétiques. Toujours à la recherche de nouveaux défis
+            pour repousser les limites de mes compétences.</p>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="bg-gray-900 py-16">
+        <div class="container mx-auto">
+            <h2 class="text-4xl font-bold text-center text-green-500 mb-8 jersey-15-regular">Compétences</h2>
+
+            <!-- Navigation -->
+            <nav class="flex justify-center mb-8">
+                <button
+                    class="tab-btn px-6 py-2 mx-2 text-white font-bold rounded-lg bg-gray-800 hover:bg-green-700 focus:outline-none focus:ring-4 focus:ring-green-400 transition duration-300 shadow-lg"
+                    data-category="frontend">Front-end</button>
+                <button
+                    class="tab-btn px-6 py-2 mx-2 text-white font-bold rounded-lg bg-gray-800 hover:bg-green-700 focus:outline-none focus:ring-4 focus:ring-green-400 transition duration-300 shadow-lg"
+                    data-category="backend">Back-end</button>
+                <button
+                    class="tab-btn px-6 py-2 mx-2 text-white font-bold rounded-lg bg-gray-800 hover:bg-green-700 focus:outline-none focus:ring-4 focus:ring-green-400 transition duration-300 shadow-lg"
+                    data-category="other">Autres</button>
+            </nav>
+
+            <!-- Skills Grid -->
+            <div id="skills-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Front-end Skills -->
+                <div
+                    class="skill-card frontend hidden p-6 bg-black rounded-lg text-center transform transition-all duration-500 hover:scale-110 hover:bg-gray-700 hover:shadow-lg fade-in">
+                    <img src="image/Other-html-5-icon.png" alt="HTML" class="w-16 h-16 mx-auto mb-4">
+                    <h3 class="text-xl font-bold text-green-500">HTML</h3>
+                </div>
+                <div
+                    class="skill-card frontend hidden p-6 bg-black rounded-lg text-center transform transition-all duration-500 hover:scale-110 hover:bg-gray-700 hover:shadow-lg fade-in">
+                    <img src="image/css-icon.png" alt="CSS" class="w-16 h-16 mx-auto mb-4">
+                    <h3 class="text-xl font-bold text-green-500">CSS</h3>
+                </div>
+                <div
+                    class="skill-card frontend hidden p-6 bg-black rounded-lg text-center transform transition-all duration-500 hover:scale-110 hover:bg-gray-700 hover:shadow-lg fade-in">
+                    <img src="image/javascript-logo-javascript-icon.png" alt="JavaScript"
+                        class="w-16 h-16 mx-auto mb-4">
+                    <h3 class="text-xl font-bold text-green-500">JavaScript</h3>
+                </div>
+                <div
+                    class="skill-card frontend hidden p-6 bg-black rounded-lg text-center transform transition-all duration-500 hover:scale-110 hover:bg-gray-700 hover:shadow-lg fade-in">
+                    <img src="image/tailwind-css-icon-2048x1229-u8dz.png" alt="Tailwind" class="w-16 h-16 mx-auto mb-4">
+                    <h3 class="text-xl font-bold text-green-500">Tailwind</h3>
+                </div>
+                <div
+                    class="skill-card frontend hidden p-6 bg-black rounded-lg text-center transform transition-all duration-500 hover:scale-110 hover:bg-gray-700 hover:shadow-lg fade-in">
+                    <img src="image/bootstrap--v2.png" alt="Bootstrap" class="w-16 h-16 mx-auto mb-4">
+                    <h3 class="text-xl font-bold text-green-500">Bootstrap</h3>
+                </div>
+                <div
+                    class="skill-card frontend hidden p-6 bg-black rounded-lg text-center transform transition-all duration-500 hover:scale-110 hover:bg-gray-700 hover:shadow-lg fade-in">
+                    <img src="image/1200px-React-icon.svg.png" alt="React" class="w-16 h-16 mx-auto mb-4">
+                    <h3 class="text-xl font-bold text-green-500">React</h3>
+                </div>
+                <div
+                    class="skill-card frontend hidden p-6 bg-black rounded-lg text-center transform transition-all duration-500 hover:scale-110 hover:bg-gray-700 hover:shadow-lg fade-in">
+                    <img src="image/1200px-Sass_Logo_Color.svg.png" alt="Sass" class="w-16 h-16 mx-auto mb-4">
+                    <h3 class="text-xl font-bold text-green-500">Sass</h3>
+                </div>
+
+                <!-- Back-end Skills -->
+                <div
+                    class="skill-card backend hidden p-6 bg-black rounded-lg text-center transform transition-all duration-500 hover:scale-110 hover:bg-gray-700 hover:shadow-lg fade-in">
+                    <img src="image/5968332.png" alt="PHP" class="w-16 h-16 mx-auto mb-4">
+                    <h3 class="text-xl font-bold text-green-500">PHP</h3>
+                </div>
+                <div
+                    class="skill-card backend hidden p-6 bg-black rounded-lg text-center transform transition-all duration-500 hover:scale-110 hover:bg-gray-700 hover:shadow-lg fade-in">
+                    <img src="image/laravel-icon-995x1024-dk77ahh4.png" alt="Laravel" class="w-16 h-16 mx-auto mb-4">
+                    <h3 class="text-xl font-bold text-green-500">Laravel</h3>
+                </div>
+                <div
+                    class="skill-card backend hidden p-6 bg-black rounded-lg text-center transform transition-all duration-500 hover:scale-110 hover:bg-gray-700 hover:shadow-lg fade-in">
+                    <img src="image/mysql-5-logo-svg-vector.png" alt="MySQL" class="w-16 h-16 mx-auto mb-4">
+                    <h3 class="text-xl font-bold text-green-500">MySQL</h3>
+                </div>
+                <div
+                    class="skill-card backend hidden p-6 bg-black rounded-lg text-center transform transition-all duration-500 hover:scale-110 hover:bg-gray-700 hover:shadow-lg fade-in">
+                    <img src="image/symfony-icon-512x512-94lugehx.png" alt="Symfony" class="w-16 h-16 mx-auto mb-4">
+                    <h3 class="text-xl font-bold text-green-500">Symfony</h3>
+                </div>
+                <div
+                    class="skill-card backend hidden p-6 bg-black rounded-lg text-center transform transition-all duration-500 hover:scale-110 hover:bg-gray-700 hover:shadow-lg fade-in">
+                    <img src="image/image (1).png" alt="Node" class="w-16 h-16 mx-auto mb-4">
+                    <h3 class="text-xl font-bold text-green-500">Node.js</h3>
+                </div>
+                <div
+                    class="skill-card backend hidden p-6 bg-black rounded-lg text-center transform transition-all duration-500 hover:scale-110 hover:bg-gray-700 hover:shadow-lg fade-in">
+                    <img src="image/Microsoft.VisualStudio.Services.png" alt="Twig" class="w-16 h-16 mx-auto mb-4">
+                    <h3 class="text-xl font-bold text-green-500">Twig</h3>
+                </div>
+
+                <!-- Other Skills -->
+                <div
+                    class="skill-card other hidden p-6 bg-black rounded-lg text-center transform transition-all duration-500 hover:scale-110 hover:bg-gray-700 hover:shadow-lg fade-in">
+                    <img src="image/2048px-Git_icon.svg.png" alt="Git" class="w-16 h-16 mx-auto mb-4">
+                    <h3 class="text-xl font-bold text-green-500">Git</h3>
+                </div>
+                <div
+                    class="skill-card other hidden p-6 bg-black rounded-lg text-center transform transition-all duration-500 hover:scale-110 hover:bg-gray-700 hover:shadow-lg fade-in">
+                    <img src="image/unity-icon-1998x2048-c6v0ej9o.png" alt="Unity" class="w-16 h-16 mx-auto mb-4">
+                    <h3 class="text-xl font-bold text-green-500">Unity</h3>
+                </div>
+                <div
+                    class="skill-card other hidden p-6 bg-black rounded-lg text-center transform transition-all duration-500 hover:scale-110 hover:bg-gray-700 hover:shadow-lg fade-in">
+                    <img src="image/174881.png" alt="Wordpress" class="w-16 h-16 mx-auto mb-4">
+                    <h3 class="text-xl font-bold text-green-500">Wordpress</h3>
+                </div>
+                <div
+                    class="skill-card other hidden p-6 bg-black rounded-lg text-center transform transition-all duration-500 hover:scale-110 hover:bg-gray-700 hover:shadow-lg fade-in">
+                    <img src="image/c-sharp-c-icon-1822x2048-wuf3ija.png" alt="C#" class="w-16 h-16 mx-auto mb-4">
+                    <h3 class="text-xl font-bold text-green-500">C#</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-16">
+        <div class="container mx-auto">
+            <h2 class="text-4xl font-bold text-center text-green-500 mb-8 jersey-15-regular">Projets</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="p-4 bg-gray-800 rounded-lg fade-in">
+                    <img src="projets/matos_iut.png" alt="Application de gestion d'emprunt de l'IUT"
+                        class="rounded mb-4">
+                    <h3 class="text-xl font-bold">Application de gestion d'emprunt de l'IUT</h3>
+                    <p class="text-sm">Application web de gestion d'emprunt de matériels développée avec Laravel.</p>
+                    <a href="https://sae501.mehr.etu.mmi-unistra.fr/" class="text-sm">Lien</a>
+                </div>
+                <div class="p-4 bg-gray-800 rounded-lg fade-in">
+                    <img src="projets/terracorsica.png" alt="TerraCorsica" class="rounded mb-4">
+                    <h3 class="text-xl font-bold">Terracorsica</h3>
+                    <p class="text-sm">Site web qui propose des parcours de randonnées du GR20 développée avec Symfony.
+                    </p>
+                    <a href="https://terracorsica.akifi.etu.mmi-unistra.fr/" class="text-sm">Lien</a>
+                </div>
+                <div class="p-4 bg-gray-800 rounded-lg fade-in">
+                    <img src="projets/meteo.png" alt="OpenWeatherAPI" class="rounded mb-4">
+                    <h3 class="text-xl font-bold">OpenWeather API</h3>
+                    <p class="text-sm">Site web météo qui exploite l'API OpenWeather en utilisant la technologie D3.js
+                    </p>
+                    <a href="https://d3-meteo.mehr.etu.mmi-unistra.fr/" class="text-sm">Lien</a>
+                </div>
+                <div class="p-4 bg-gray-800 rounded-lg fade-in">
+                    <img src="projets/MiniatureVR.png" alt="VR/AR" class="rounded mb-4">
+                    <h3 class="text-xl font-bold">Application en AR à l'Eurométropole</h3>
+                    <p class="text-sm">Application pour visualiser des projets d'aménagement en relation avec la
+                        direction géomatique</p>
+                    <a href="" class="text-sm">Lien</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="bg-gray-900 py-16">
+        <div class="container mx-auto text-center">
+            <h2 class="text-4xl font-bold text-green-500 mb-8 jersey-15-regular">Contact</h2>
+            <p class="mb-4">Vous souhaitez collaborer ou en savoir plus ? Envoyez-moi un mail !</p>
+            <a href="mailto:paul.mehr68@gmail.com" class="text-green-500 text-lg font-bold">paul.mehr68@gmail.com</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-6 bg-black text-center">
+        <p>&copy; 2025 Mon Portfolio. Tous droits réservés.</p>
+    </footer>
+
+    <script>
+        const menuBtn = document.getElementById('menu-btn');
+        const menuItems = document.getElementById('menu-items');
+        menuBtn.addEventListener('click', () => {
+            menuItems.classList.toggle('hidden');
+        });
+
+        // Animation on scroll
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('show');
+                }
+            });
+        });
+
+        document.querySelectorAll('.fade-in').forEach(element => {
+            observer.observe(element);
+        });
+
+        // JavaScript to handle tab switching
+        document.addEventListener("DOMContentLoaded", function () {
+            const tabs = document.querySelectorAll(".tab-btn");
+            const skills = document.querySelectorAll(".skill-card");
+
+            tabs.forEach(tab => {
+                tab.addEventListener("click", () => {
+                    // Remove active class from all tabs
+                    tabs.forEach(t => t.classList.remove("bg-green-500", "text-black"));
+                    tab.classList.add("bg-green-500", "text-black");
+
+                    // Show relevant skills
+                    const category = tab.getAttribute("data-category");
+                    skills.forEach(skill => {
+                        if (skill.classList.contains(category)) {
+                            skill.classList.remove("hidden");
+                        } else {
+                            skill.classList.add("hidden");
+                        }
+                    });
+                });
+            });
+
+            tabs[0].click();
+        });
+
+
+    </script>
+
+</body>
+
+</html>

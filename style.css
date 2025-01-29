@@ -1,0 +1,72 @@
+html {
+  scroll-behavior: smooth;
+}
+
+
+.jersey-15-regular {
+  font-family: "Jersey 15", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s, transform 0.5s;
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+
+.fade-in.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Animation des cartes de compétences */
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Animation de survol des cartes */
+.p-6:hover {
+  background-color: #2d3748; /* Changer la couleur de fond au survol */
+  transform: scale(1.1); /* Augmenter légèrement la taille */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Ombre subtile */
+  transition: transform 0.3s ease, background-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+/* Effet flottant sur l'icône */
+.p-6:hover img {
+  transform: scale(1.2); /* Agrandir l'icône au survol */
+  transition: transform 0.3s ease;
+}
+
+/* Ajout d'un léger effet de flottement sur la carte */
+.p-6 {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Effet flottant léger en bas */
+.p-6:nth-child(odd) {
+  animation: floatEffect 6s ease-in-out infinite alternate;
+}
+
+.p-6:nth-child(even) {
+  animation: floatEffect 6s ease-in-out infinite alternate-reverse;
+}
+
+/* Animation de flottement */
+@keyframes floatEffect {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
