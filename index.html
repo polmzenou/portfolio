@@ -13,6 +13,7 @@
 </head>
 
 <body class="bg-black text-white font-sans">
+    <div class="custom-cursor"></div>
     <!-- Header -->
     <header class="sticky top-0 bg-black bg-opacity-90 z-50 b-bottom-2">
         <nav class="container mx-auto p-5 flex justify-between items-center">
@@ -51,7 +52,7 @@
             <a href="#about"
                 class="mt-6 inline-block px-8 py-4 bg-green-500 text-black font-bold rounded hover:bg-green-400">
                 Découvrir
-            </a>
+            </a>    
         </div>
     </section>
 
@@ -254,6 +255,21 @@
         document.querySelectorAll('.fade-in').forEach(element => {
             observer.observe(element);
         });
+
+        document.addEventListener("DOMContentLoaded", () => {
+            const cursor = document.querySelector(".custom-cursor");
+          
+            document.addEventListener("mousemove", (e) => {
+              cursor.style.left = `${e.clientX}px`;
+              cursor.style.top = `${e.clientY}px`;
+            });
+          
+            document.querySelectorAll("a, button").forEach((el) => {
+              el.addEventListener("mouseenter", () => cursor.classList.add("active"));
+              el.addEventListener("mouseleave", () => cursor.classList.remove("active"));
+            });
+          });
+          
 
         // JavaScript to handle tab switching
         document.addEventListener("DOMContentLoaded", function () {

@@ -2,6 +2,34 @@ html {
   scroll-behavior: smooth;
 }
 
+* {
+  cursor: none; /* Cache le curseur par défaut */
+}
+
+.custom-cursor {
+  position: fixed;
+  width: 20px;
+  height: 20px;
+  background-color: rgba(0, 255, 150, 0.8); /* Vert lumineux */
+  border-radius: 50%;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  transition: transform 0.1s ease-out, background-color 0.2s ease;
+  mix-blend-mode: difference; /* Effet de contraste */
+  z-index: 9999;
+}
+
+.custom-cursor.active {
+  width: 40px;
+  height: 40px;
+  background-color: rgba(255, 255, 255, 0.8); /* Blanc lumineux au survol */
+}
+
+@media (max-width: 768px) {
+  .custom-cursor {
+    display: none; /* Désactiver sur mobile pour éviter les bugs */
+  }
+}
 
 .jersey-15-regular {
   font-family: "Jersey 15", serif;
