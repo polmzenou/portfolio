@@ -18,6 +18,10 @@
     <header class="sticky top-0 bg-black bg-opacity-90 z-50 b-bottom-2">
         <nav class="container mx-auto p-5 flex justify-between items-center">
             <h1 class="text-2xl sm:text-3xl font-bold text-green-500"><span class="text-white">Paul</span> Mehr</h1>
+            <button id="theme-toggle" class="p-2 rounded bg-gray-800 text-white hover:bg-gray-600 transition">
+                Mode Clair
+            </button>
+
             <!-- Hamburger Menu -->
             <div class="sm:hidden">
                 <button id="menu-btn" class="text-green-500 focus:outline-none">
@@ -52,7 +56,7 @@
             <a href="#about"
                 class="mt-6 inline-block px-8 py-4 bg-green-500 text-black font-bold rounded hover:bg-green-400">
                 Découvrir
-            </a>    
+            </a>
         </div>
     </section>
 
@@ -218,6 +222,12 @@
                         direction géomatique</p>
                     <a href="" class="text-sm">Lien</a>
                 </div>
+                <div class="p-4 bg-gray-800 rounded-lg fade-in">
+                    <img src="projets/conso.png" alt="VR/AR" class="rounded mb-4">
+                    <h3 class="text-xl font-bold">Application web pour un suivi de consommation énergétique</h3>
+                    <p class="text-sm">Application pour visualiser les données pour suivre la consommation énergétique de l'IUT de Haguenau développée avec Laravel.</p>
+                    <a href="https://sae501.mehr.soete.etu.mmi-unistra.fr" class="text-sm">Lien</a>
+                </div>
             </div>
         </div>
     </section>
@@ -252,24 +262,40 @@
             });
         });
 
+        const themeToggle = document.getElementById("theme-toggle");
+        const body = document.body;
+
+        themeToggle.addEventListener("click", () => {
+            body.classList.toggle("bg-black");
+            body.classList.toggle("bg-white");
+            body.classList.toggle("text-black");
+            body.classList.toggle("text-white");
+
+            if (body.classList.contains("bg-black")) {
+                themeToggle.textContent = "Mode Clair";
+            } else {
+                themeToggle.textContent = "Mode Sombre";
+            }
+        });
+
         document.querySelectorAll('.fade-in').forEach(element => {
             observer.observe(element);
         });
 
         document.addEventListener("DOMContentLoaded", () => {
             const cursor = document.querySelector(".custom-cursor");
-          
+
             document.addEventListener("mousemove", (e) => {
-              cursor.style.left = `${e.clientX}px`;
-              cursor.style.top = `${e.clientY}px`;
+                cursor.style.left = `${e.clientX}px`;
+                cursor.style.top = `${e.clientY}px`;
             });
-          
+
             document.querySelectorAll("a, button").forEach((el) => {
-              el.addEventListener("mouseenter", () => cursor.classList.add("active"));
-              el.addEventListener("mouseleave", () => cursor.classList.remove("active"));
+                el.addEventListener("mouseenter", () => cursor.classList.add("active"));
+                el.addEventListener("mouseleave", () => cursor.classList.remove("active"));
             });
-          });
-          
+        });
+
 
         // JavaScript to handle tab switching
         document.addEventListener("DOMContentLoaded", function () {
