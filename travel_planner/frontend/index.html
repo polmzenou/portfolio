@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planificateur de Voyage Collaboratif</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="header">
+        <h1>Planificateur de Voyage</h1>
+        <button id="theme-switch">Mode Sombre/Clair</button>
+    </div>
+    <div id="trip-container"></div>
+
+    <div id="trip-list">
+        <!-- Liste des voyages ici -->
+    </div>
+
+    <div id="chat-container">
+        <div id="chat-messages"></div>
+        <input type="text" id="chat-input" placeholder="Écrire un message..." />
+        <button id="send-message">Envoyer</button>
+    </div>
+
+    <script src="js/script.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+</body>
+</html>

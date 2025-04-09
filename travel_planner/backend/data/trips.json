@@ -1,0 +1,12 @@
+[
+    {
+        "id": "1",
+        "name": "Vacances en Thaïlande",
+        "participants": ["user1", "user2"],
+        "activities": [
+            {"name": "Plongée sous-marine", "cost": 50},
+            {"name": "Visite du marché flottant", "cost": 30}
+        ],
+        "budget": 1000
+    }
+]

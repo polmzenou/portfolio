@@ -1,0 +1,78 @@
+body {
+    overflow-x: hidden; /* Désactive le scroll horizontal si nécessaire */
+    overflow-y: auto;   /* Active le scroll vertical */
+  }
+
+  
+/* Style de base pour les boutons */
+.btn-primary {
+    background-color: #0ea5e9;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.75rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+  }
+  
+  .btn-primary:hover {
+    background-color: #0284c7;
+    transform: scale(1.05);
+  }
+  
+  .btn-secondary {
+    background-color: white;
+    color: #0f172a;
+    padding: 0.75rem 1.2rem;
+    border-radius: 0.75rem;
+    font-weight: 600;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+  }
+  
+  .btn-secondary:hover {
+    background-color: #f1f5f9;
+    transform: scale(1.03);
+  }
+  
+  /* Style pour les boîtes de couleurs */
+  .color-box {
+    width: 110px;
+    height: 110px;
+    border-radius: 1rem;
+    box-shadow: 0 4px 30px rgba(0,0,0,0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    border: 2px solid white;
+  }
+  
+  .color-box:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 40px rgba(0,0,0,0.2);
+  }
+  
+  /* Animation d'apparition */
+  .animate-fade-in {
+    animation: fade-in 1s ease-out forwards;
+    opacity: 0;
+  }
+  
+  @keyframes fade-in {
+    to {
+      opacity: 1;
+    }
+  }
+  
+  /* Style du fond pour le mode dégradé */
+  .gradient-box {
+    background-image: linear-gradient(45deg, #f1f5f9, #e2e8f0);
+    width: 100%;
+    height: 100px;
+    border-radius: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #0f172a;
+  }
+  

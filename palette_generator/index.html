@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Palette Generator</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://unpkg.com/colorthief/dist/color-thief.umd.js"></script>
+</head>
+<body class="bg-gradient-to-br from-slate-100 to-slate-300 text-gray-900 min-h-screen flex flex-col items-center justify-center relative overflow-hidden">
+
+  <div class="z-10 text-center p-6 max-w-3xl w-full">
+    <h1 class="text-4xl font-bold mb-6 animate-fade-in">🎨 Générateur de Palette</h1>
+
+    <!-- Nombre de couleurs -->
+    <div class="flex items-center justify-center gap-4 mb-6">
+      <label for="colorCount" class="text-sm font-medium">Nombre de couleurs : <span id="colorCountValue">5</span></label>
+      <input id="colorCount" type="range" min="3" max="10" value="5" class="w-40 accent-blue-500">
+    </div>
+
+    <!-- Téléchargement de l'image -->
+    <div class="mb-6">
+      <input type="file" id="imageInput" accept="image/*" class="p-2 border-2 rounded-md cursor-pointer">
+      <span id="imageStatus" class="text-sm text-gray-600">Téléchargez une image pour extraire les couleurs</span>
+    </div>
+
+    <!-- Palette affichée -->
+    <div id="palette" class="flex flex-wrap justify-center gap-6 mb-8 transition-all duration-300"></div>
+
+    <!-- Boutons -->
+    <div class="flex flex-wrap gap-4 justify-center">
+      <button id="generateBtn" class="btn-primary">🎲 Générer une palette</button>
+      <button id="copyAllBtn" class="btn-secondary">📋 Copier les couleurs</button>
+      <button id="exportBtn" class="btn-secondary">💾 Exporter en JSON</button>
+      <button id="gradientBtn" class="btn-primary">🌈 Générer un Dégradé</button>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
