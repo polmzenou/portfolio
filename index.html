@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Paul Mehr | Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" href="image/raw-removebg-preview.png" type="image/png">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="animations.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -33,10 +34,14 @@
     <!-- Header with glowing effect -->
     <header class="sticky top-0 bg-black bg-opacity-90 z-50 border-b border-green-500/30 backdrop-blur-sm">
         <nav class="container mx-auto p-5 flex justify-between items-center">
-            <h1 class="text-2xl sm:text-3xl font-bold neon-text">
-                <span class="text-white">Paul</span> <span class="text-green-500">Mehr</span>
-            </h1>
-
+            <!-- Conteneur pour le logo et le titre -->
+            <div class="flex items-center space-x-4">
+                <img src="image/raw-removebg-preview.png" alt="Logo" class="block w-12 h-12 rounded-full border-2 border-green-500/30">
+                <h1 class="text-2xl sm:text-3xl font-bold neon-text">
+                    <span class="text-white">Paul</span> <span class="text-green-500">Mehr</span>
+                </h1>
+            </div>
+    
             <!-- Hamburger Menu -->
             <div class="sm:hidden">
                 <button id="menu-btn" class="text-green-500 focus:outline-none">
@@ -47,7 +52,7 @@
                     </svg>
                 </button>
             </div>
-
+    
             <!-- Menu Items -->
             <ul id="menu-items"
                 class="hidden sm:flex space-x-6 bg-black sm:bg-transparent sm:static absolute top-16 left-0 w-full sm:w-auto sm:flex-row flex-col p-5 sm:p-0">
@@ -66,7 +71,7 @@
 
         <!-- Texte centré avec effet de type machine à écrire -->
         <div class="flex flex-col items-center text-center z-10">
-            <h2 class="text-5xl sm:text-7xl font-bold jersey-15-regular glitch-text" data-text="Bienvenue !">
+            <h2 class="text-5xl sm:text-7xl font-bold jersey-15-regular glitch-text neon-text" data-text="Bienvenue !">
                 Bien<span class="text-green-500">venue !</span>
             </h2>
             <p class="typewriter text-base sm:text-lg mt-4">
@@ -82,7 +87,7 @@
     <!-- About Section with parallax effect -->
     <section id="about" class="py-20 px-6 relative">
         <div class="container mx-auto text-center max-w-4xl">
-            <h2 class="text-4xl sm:text-5xl font-bold text-green-500 mb-12 jersey-15-regular">À propos</h2>
+            <h2 class="text-4xl sm:text-5xl font-bold text-green-500 mb-12 jersey-15-regular neon-text">À propos</h2>
 
             <div class="about-card bg-gray-900/60 p-8 rounded-xl shadow-glow backdrop-blur-sm">
                 <div class="about-content relative z-10">
@@ -106,7 +111,7 @@
     <!-- Skills Section with 3D card flip -->
     <section id="skills" class="py-20 bg-gradient-to-b from-black to-gray-900">
         <div class="container mx-auto">
-            <h2 class="text-4xl font-bold text-center text-green-500 mb-12 jersey-15-regular">Compétences</h2>
+            <h2 class="text-4xl font-bold text-center text-green-500 mb-12 jersey-15-regular neon-text">Compétences</h2>
 
             <!-- Navigation avec effet de focus -->
             <nav class="flex justify-center mb-12">
@@ -394,7 +399,7 @@
     <!-- Projects Section with hover effects -->
     <section id="projects" class="py-20">
         <div class="container mx-auto px-4">
-            <h2 class="text-4xl font-bold text-center text-green-500 mb-12 jersey-15-regular">Projets</h2>
+            <h2 class="text-4xl font-bold text-center text-green-500 mb-12 jersey-15-regular neon-text">Projets</h2>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
                 <div class="project-card fade-in">
@@ -534,7 +539,7 @@
     <!-- Contact Section with Spline background -->
     <section id="contact" class="relative min-h-screen py-32 overflow-hidden">
         <!-- Spline 3D Background -->
-        <canvas id="canvas3d" class="absolute top-0 left-0 w-full h-full z-0 pointer-events-none"></canvas>
+        <canvas id="canvas3d" class="absolute top-0 left-0 w-full h-full z-0 pointer-events-none sm:hidden"></canvas>
 
         <!-- Gradient mask (top) -->
         <div
@@ -547,7 +552,7 @@
         </div>
         <!-- Contact Content -->
         <div class="container mx-auto text-center px-4 relative z-10">
-            <h2 class="text-4xl font-bold text-green-500 mb-12 jersey-15-regular">Contact</h2>
+            <h2 class="text-4xl font-bold text-green-500 mb-12 jersey-15-regular neon-text">Contact</h2>
 
             <div class="contact-card max-w-2xl mx-auto bg-gray-900/60 p-8 rounded-xl shadow-glow backdrop-blur-sm">
                 <div class="mb-8">
