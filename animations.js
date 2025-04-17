@@ -382,3 +382,17 @@ document.addEventListener("DOMContentLoaded", function() {
         setTimeout(() => typeWriter(text, 0, typewriterElement), 1000);
     }
 });
+
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener("click", function (e) {
+        const target = document.querySelector(this.getAttribute("href"));
+        if (target) {
+            e.preventDefault();
+            target.scrollIntoView({
+                behavior: "smooth",
+                block: "start"
+            });
+        }
+    });
+});
+
