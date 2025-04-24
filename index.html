@@ -7,7 +7,17 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="icon" href="image/raw-removebg-preview.png" type="image/png" />
     <link rel="stylesheet" href="styles.css" />
+    <link rel="preload" href="animations.css" as="style" />
     <link rel="stylesheet" href="animations.css" />
+    <link
+      rel="preload"
+      href="https://fonts.googleapis.com/css2?family=Jersey+15&family=Poppins:wght@300;400;600;700&display=swap"
+      as="style"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Jersey+15&family=Poppins:wght@300;400;600;700&display=swap"
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -96,7 +106,7 @@
       <!-- Texte centré avec effet de type machine à écrire -->
       <div class="flex flex-col items-center text-center z-10">
         <h2
-          class="text-5xl sm:text-7xl font-bold jersey-15-regular glitch-text neon-text"
+          class="text-5xl sm:text-7xl font-bold jersey-15-regular neon-text"
           data-text="Bienvenue !"
         >
           <span class="glitch-text-inner"
@@ -258,7 +268,7 @@
             <div class="flip-card-inner">
               <div class="flip-card-front">
                 <img
-                  src="image/tailwind-css-icon-2048x1229-u8dz.png"
+                  src="image/tailwind-css-icon-2048x1229-u8dz.webp"
                   alt="Tailwind"
                   loading="lazy"
                   class="w-16 h-16 mx-auto mb-4"
@@ -420,7 +430,7 @@
             <div class="flip-card-inner">
               <div class="flip-card-front">
                 <img
-                  src="image/symfony-icon-512x512-94lugehx.png"
+                  src="image/symfony-icon-512x512-94lugehx.webp"
                   alt="Symfony"
                   class="w-16 h-16 mx-auto mb-4"
                 />
@@ -509,7 +519,7 @@
             <div class="flip-card-inner">
               <div class="flip-card-front">
                 <img
-                  src="image/unity-icon-1998x2048-c6v0ej9o.png"
+                  src="image/unity-icon-1998x2048-c6v0ej9o.webp"
                   alt="Unity"
                   class="w-16 h-16 mx-auto mb-4"
                 />
@@ -915,8 +925,17 @@
     </footer>
 
     <!-- Scripts -->
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-    <script src="animations.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"
+      defer
+    ></script>
+    <script>
+      if (window.innerWidth < 768) {
+        document.write('<script src="animations-mobile.js" defer><\\/script>');
+      } else {
+        document.write('<script src="animations.js" defer><\\/script>');
+      }
+    </script>
     <script type="module">
       import { Application } from "https://unpkg.com/@splinetool/runtime@latest/build/runtime.js";
       const canvas = document.getElementById("canvas3d");

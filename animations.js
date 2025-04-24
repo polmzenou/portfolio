@@ -1,51 +1,48 @@
 document.addEventListener("DOMContentLoaded", function () {
-  // Custom Cursor
-  const cursor = document.querySelector(".custom-cursor");
-  const cursorTrail = document.querySelector(".custom-cursor-trail");
-  let cursorVisible = true;
-  let cursorEnlarged = false;
+  if (window.innerWidth >= 640) {
+    const cursor = document.querySelector(".custom-cursor");
+    const cursorTrail = document.querySelector(".custom-cursor-trail");
+    let cursorVisible = true;
+    let cursorEnlarged = false;
 
-  // Mouse movement
-  document.addEventListener("mousemove", (e) => {
-    if (cursorVisible) {
-      cursor.style.left = `${e.clientX}px`;
-      cursor.style.top = `${e.clientY}px`;
+    document.addEventListener("mousemove", (e) => {
+      if (cursorVisible) {
+        cursor.style.left = `${e.clientX}px`;
+        cursor.style.top = `${e.clientY}px`;
 
-      // Trail follows with delay
-      setTimeout(() => {
-        cursorTrail.style.left = `${e.clientX}px`;
-        cursorTrail.style.top = `${e.clientY}px`;
-      }, 80);
-    }
-  });
-
-  // Cursor hover effects
-  document
-    .querySelectorAll("a, button, .project-card, .flip-card, .social-icon")
-    .forEach((el) => {
-      el.addEventListener("mouseenter", () => {
-        cursor.classList.add("active");
-        cursorEnlarged = true;
-      });
-
-      el.addEventListener("mouseleave", () => {
-        cursor.classList.remove("active");
-        cursorEnlarged = false;
-      });
+        setTimeout(() => {
+          cursorTrail.style.left = `${e.clientX}px`;
+          cursorTrail.style.top = `${e.clientY}px`;
+        }, 80);
+      }
     });
 
-  // Hide cursor when leaving window
-  document.addEventListener("mouseout", () => {
-    cursor.style.opacity = "0";
-    cursorTrail.style.opacity = "0";
-    cursorVisible = false;
-  });
+    document
+      .querySelectorAll("a, button, .project-card, .flip-card, .social-icon")
+      .forEach((el) => {
+        el.addEventListener("mouseenter", () => {
+          cursor.classList.add("active");
+          cursorEnlarged = true;
+        });
 
-  document.addEventListener("mouseover", () => {
-    cursor.style.opacity = "1";
-    cursorTrail.style.opacity = "1";
-    cursorVisible = true;
-  });
+        el.addEventListener("mouseleave", () => {
+          cursor.classList.remove("active");
+          cursorEnlarged = false;
+        });
+      });
+
+    document.addEventListener("mouseout", () => {
+      cursor.style.opacity = "0";
+      cursorTrail.style.opacity = "0";
+      cursorVisible = false;
+    });
+
+    document.addEventListener("mouseover", () => {
+      cursor.style.opacity = "1";
+      cursorTrail.style.opacity = "1";
+      cursorVisible = true;
+    });
+  }
 
   // Mobile Menu
   const menuBtn = document.getElementById("menu-btn");
@@ -145,7 +142,7 @@ document.addEventListener("DOMContentLoaded", function () {
       particlesJS("particles-js", {
         particles: {
           number: {
-            value: 80,
+            value: 30,
             density: {
               enable: true,
               value_area: 800,
@@ -276,7 +273,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         // Create a grid of particles
         const geometry = new THREE.BufferGeometry();
-        const count = 1500;
+        const count = 500;
 
         const positions = new Float32Array(count * 3);
         const colors = new Float32Array(count * 3);
@@ -336,14 +333,6 @@ document.addEventListener("DOMContentLoaded", function () {
   if (typeof gsap !== "undefined" && typeof ScrollTrigger !== "undefined") {
     // Register ScrollTrigger plugin
     gsap.registerPlugin(ScrollTrigger);
-
-    // Animate hero section
-    gsap.from(".hero-section .glitch-text", {
-      duration: 1.5,
-      y: 50,
-      opacity: 0,
-      ease: "power3.out",
-    });
 
     gsap.from(".hero-section .typewriter", {
       duration: 1,
