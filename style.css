@@ -1,4 +1,18 @@
-/* Base styles */
+/* Désactivation des animations lourdes pour les mobiles */
+@media (max-width: 768px) {
+  #particles-js, #hero-canvas, .custom-cursor, .custom-cursor-trail {
+    display: none !important;
+  }
+}
+
+/* Réduction des effets si utilisateur demande moins d'animations */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
 html {
   scroll-behavior: smooth;
   font-family: 'Poppins', sans-serif;
